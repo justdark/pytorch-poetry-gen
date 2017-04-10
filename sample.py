@@ -7,7 +7,6 @@ model = torch.load('poetry-gen.pt')
 max_length = 100
 rFile = file('wordDic', 'r')
 word_to_ix = p.load(rFile)
-torch.manual_seed(1)
 
 def invert_dict(d):
     return dict((v, k) for k, v in d.iteritems())
